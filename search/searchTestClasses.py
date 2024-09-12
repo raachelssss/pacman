@@ -176,7 +176,7 @@ class GraphSearchTest(testClasses.TestCase):
         else:
             self.heuristic = None
 
-    # Note that the return type of this function is a tripple:
+    # Note that the return type of this function is a triple:
     # (solution, expanded states, error message)
     def getSolInfo(self, search):
         alg = getattr(search, self.alg)
