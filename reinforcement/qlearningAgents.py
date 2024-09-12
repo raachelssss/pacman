@@ -80,7 +80,6 @@ class QLearningAgent(ReinforcementAgent):
           are no legal actions, which is the case at the terminal state,
           you should return None.
         """
-        "*** YOUR CODE HERE ***"
         actions = self.getLegalActions(state)
         if len(actions) == 0:
             return 0.0
@@ -117,7 +116,6 @@ class QLearningAgent(ReinforcementAgent):
             return random.choice(legalActions)
         else:
             return self.computeActionFromQValues(state)
-        "*** YOUR CODE HERE ***"
         util.raiseNotDefined()
 
 
@@ -193,20 +191,7 @@ class ApproximateQAgent(PacmanQAgent):
           where * is the dotProduct operator
         """
         "*** YOUR CODE HERE ***"
-        # print(self.weights * IdentityExtractor.getFeatures(IdentityExtractor, state, action))
-        # featureList = list(self.featExtractor.getFeatures(state, action).items())
-        # q = 0
-        # for feature, val in featureList:
-        #     q += self.weights[feature] + val
-        # print(q)
-        # return self.weights * IdentityExtractor.getFeatures(self, state, action)
         return self.weights * self.featExtractor.getFeatures(state, action)
-        # return self.weights * IdentityExtractor.getFeatures(IdentityExtractor, state, action)
-        # print(self.featExtractor.getFeatures(state, action))
-        # print(self.featExtractor)
-        # q = self.weights * self.featExtractor
-        # return q
-        # util.raiseNotDefined()
 
     def update(self, state, action, nextState, reward: float):
         """
