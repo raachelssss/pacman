@@ -66,10 +66,10 @@ class Gridworld(mdp.MarkovDecisionProcess):
         return ('north','west','south','east')
 
     def get4Actions(self, state):
-        actions_list = list(self.getPossibleActions(state))
-        if len(actions_list) == 1:
-            actions_list = [actions_list[0] for _ in range(4)]
-        return actions_list
+        actions = list(self.getPossibleActions(state))
+        if len(actions) == 1:
+            actions_list = [actions[0] for _ in range(4)]
+        return actions
 
     def getStates(self):
         """
