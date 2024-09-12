@@ -54,8 +54,8 @@ class GreedyAgent(Agent):
                       for action in legal]
         scored = [(self.evaluationFunction(state), action)
                   for state, action in successors]
-        bestScore = max(scored)[0]
-        bestActions = [pair[1] for pair in scored if pair[0] == bestScore]
+        best_score = max(scored)[0]
+        bestActions = [pair[1] for pair in scored if pair[0] == best_score]
         return random.choice(bestActions)
 
 

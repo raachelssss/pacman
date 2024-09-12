@@ -25,8 +25,8 @@ class GhostAgent(Agent):
         self.index = index
 
     def getAction(self, state):
-        dist = self.getDistribution(state)
-        if len(dist) == 0:
+        distance = self.getDistribution(state)
+        if len(distance) == 0:
             return Directions.STOP
         else:
             return util.chooseFromDistribution(dist)

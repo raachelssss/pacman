@@ -19,7 +19,7 @@ import random
 
 class KeyboardAgent(Agent):
     """
-    An agent controlled by the keyboard.
+    A keyboard agent controlled by the keyboard.
     """
     # NOTE: Arrow keys also work.
     WEST_KEY = 'a'
@@ -35,8 +35,7 @@ class KeyboardAgent(Agent):
         self.keys = []
 
     def getAction(self, state):
-        from graphicsUtils import keys_waiting
-        from graphicsUtils import keys_pressed
+        from graphicsUtils import keys_waiting, keys_pressed
         keys = keys_waiting() + keys_pressed()
         if keys != []:
             self.keys = keys
