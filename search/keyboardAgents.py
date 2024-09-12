@@ -68,7 +68,6 @@ class KeyboardAgent2(KeyboardAgent):
     """
     A second agent controlled by the keyboard.
     """
-    # NOTE: Arrow keys also work.
     WEST_KEY  = 'j'
     EAST_KEY  = "l"
     NORTH_KEY = 'i'
